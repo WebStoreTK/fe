@@ -2,12 +2,12 @@ export interface ITypeCategories {
   id: string;
   name: string;
 }
-export interface ITypeCoupons {
-  id: string;
-  type: string;
-  name: string;
-  price: number;
-}
+// export interface ITypeCoupons {
+//   id: string;
+//   type: string;
+//   name: string;
+//   price: number;
+// }
 export interface ITypeProducts {
   categoryId: string;
   name: string;
