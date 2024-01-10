@@ -13,20 +13,22 @@ export const Basket = () => {
   const [orders, setOrders] = useState([]); // 초기 주문 목록을 빈 배열로 설정
   const [totalPayment, setTotalPayment] = useState(0);
 
-  const handleOrder = (menuItem) => {
-    // 주문 처리 로직을 추가합니다.
-    // 선택한 메뉴를 주문 목록에 추가합니다.
-    const newOrders = [...orders, menuItem];
-    setOrders(newOrders);
-    console.log(newOrders);
 
-    // 총 결제금액을 업데이트합니다.
-    const newTotalPayment = newOrders.reduce(
-      (total, order) => total + order.price,
-      0
-    );
-    setTotalPayment(newTotalPayment);
-  };
+
+  // const handleOrder = (menuItem) => {
+  //   // 주문 처리 로직을 추가합니다.
+  //   // 선택한 메뉴를 주문 목록에 추가합니다.
+  //   const newOrders = [...orders, menuItem];
+  //   setOrders(newOrders);
+  //   console.log(newOrders);
+
+  //   // 총 결제금액을 업데이트합니다.
+  //   const newTotalPayment = newOrders.reduce(
+  //     (total, order) => total + order.price,
+  //     0
+  //   );
+  //   setTotalPayment(newTotalPayment);
+  // };
 
   const handlePayment = () => {
     // 결제 처리 로직을 추가하세요.

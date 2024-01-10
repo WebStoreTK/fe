@@ -24,24 +24,43 @@ import { Quantity } from "../../quantity/Quantity.container";
 import { addProductState, productState } from "../../../../commons/store/store";
 import { useRecoilState } from "recoil";
 
-export const Modal01 = () => {
+export const Modal01 = ({ addToBasket, setIsCardModal }) => {
   const [options, setOptions] = useState([]);
-
+  const [size, setSizeOptions] = useState([]);
   const [product, setProduct] = useRecoilState<ITypeProducts>(productState);
   const [basketItem, setBasketItem] = useRecoilState<ITypeProducts | {}>(addProductState);
 
   const [isCardModal, setIsCardModal] = useState(true);
 
-
   const onClickAddBasket = () => {
-    // 선택한 메뉴를 주문 목록에 추가하는 로직
-    const newBasket = [...basketItem, product, ...options];
-    setBasketItem(newBasket);
-    console.log("야야야야" + newBasket);
+    // 선택한 메뉴와 옵션 정보를 가져와서 장바구니에 추가하는 로직
+    const selectedOptions = options.filter((option) => option.state);
+    const selectedSizeOptions = size.filter((sizeOption) => sizeOption.state);
 
-    // 페이지 이동이 필요한 경우 React Router를 사용하여 이동할 수 있습니다.
-    // history.push("/order"); // 예시로, 주문 페이지의 경로입니다. 필요에 따라 주석을 해제하고 경로를 수정하세요.
+    const newItem = {
+      product: product,
+      options: selectedOptions,
+      sizeOptions: selectedSizeOptions,
+    };
+
+    // 부모 컴포넌트에서 전달한 함수 호출
+    addToBasket(newItem);
+
+    // 모달 닫기 등의 추가적인 로직이 필요하다면 여기에 추가하세요.
+    setIsCardModal(false);
   };
+
+
+  // const onClickAddBasket = () => {
+  //   // 선택한 메뉴를 주문 목록에 추가하는 로직
+  //   const newBasket = [...basketItem, product, ...options];
+  //   setBasketItem(newBasket);
+  //   console.log("야야야야" + newBasket);
+
+  //   // 페이지 이동이 필요한 경우 React Router를 사용하여 이동할 수 있습니다.
+  //   // history.push("/order"); // 예시로, 주문 페이지의 경로입니다. 필요에 따라 주석을 해제하고 경로를 수정하세요.
+  // };
+  
 
   const onClickCloseModal = () => {
     setIsCardModal(false);
