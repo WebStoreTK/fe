@@ -115,7 +115,7 @@ export const Modal01 = () => {
           </ProductOption>
 
           <AddBtn>
-            <Button02 btnText="choice1111" onClickBtn={onClickAddBasket} />
+            <Button02 btnText="choice2222" onClickBtn={onClickAddBasket} />
           </AddBtn>
         </ProductInfo>
       </ModalContainer>
