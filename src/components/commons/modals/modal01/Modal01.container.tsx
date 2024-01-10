@@ -12,7 +12,7 @@ import {
   ProductTop,
   Wrapper,
 } from "./Modal01.style";
-import { Options, SizeOptions} from "../../option/Option.container";
+import { Options, SizeOptions } from "../../option/Option.container";
 import {
   ITypeProductOption,
   ITypeProducts,
@@ -27,22 +27,16 @@ import { useRecoilState } from "recoil";
 export const Modal01 = () => {
   const [options, setOptions] = useState([]);
   const [size, setSizeOptions] = useState([]);
-    
 
   const [product, setProduct] = useRecoilState<ITypeProducts>(productState);
-  const [basketItem, setBasketItem] = useRecoilState<ITypeProducts | {}>(addProductState);
+  const [basketItem, setBasketItem] = useRecoilState<ITypeProducts[]>(addProductState);
 
   const [isCardModal, setIsCardModal] = useState(true);
 
-
   const onClickAddBasket = () => {
-    // 선택한 메뉴를 주문 목록에 추가하는 로직
-    const newBasket = [...basketItem, product, ...options];
-    setBasketItem(newBasket);
-    console.log("야야야야" + newBasket);
-
-    // 페이지 이동이 필요한 경우 React Router를 사용하여 이동할 수 있습니다.
-    // history.push("/order"); // 예시로, 주문 페이지의 경로입니다. 필요에 따라 주석을 해제하고 경로를 수정하세요.
+      const newBasket = [...basketItem, product, ...options, ...size];
+      setBasketItem(newBasket);
+      console.log("선택 :", newBasket);
   };
 
   const onClickCloseModal = () => {
@@ -53,10 +47,6 @@ export const Modal01 = () => {
     // 모달이 닫혔을 때
     return null; // 또는 다른 방식으로 모달을 렌더링하지 않도록 처리
   }
-
-  // useEffect(() => {
-  //   console.log(options);
-  // }, [options]);
 
   return (
     <Wrapper>
