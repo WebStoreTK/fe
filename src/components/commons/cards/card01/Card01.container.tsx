@@ -20,7 +20,7 @@ export const Card01 = (props: IPropsCard01) => {
         </ProductPrice>
         <AddBtn>
           <Button01
-            btnText="choice2222"
+            btnText="choice1111"
             onClickBtn={props.onClickOpenModal(props.product)}
           />
         </AddBtn>
