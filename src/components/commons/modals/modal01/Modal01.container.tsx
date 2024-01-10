@@ -17,28 +17,34 @@ import {
   ITypeProductOption,
   ITypeProducts,
 } from "../../../../commons/mock/Data.types";
-import { Button01 } from "../../buttons/button01/Button01.container";
-import { Fragment, useEffect, useState } from "react";
+import { Button02 } from "../../buttons/button01/Button01.container";
+import { Fragment, useState } from "react";
 import { Quantity } from "../../quantity/Quantity.container";
 import { addProductState, productState } from "../../../../commons/store/store";
 import { useRecoilState } from "recoil";
 
 export const Modal01 = () => {
   const [options, setOptions] = useState([]);
-  const [product] = useRecoilState<ITypeProducts>(productState);
-  const [basketItem, setBasketItem] =
-    useRecoilState<ITypeProducts>(addProductState);
-  const [isModalClose, setIsModalClose] = useState(true);
+  const [product, setProduct] = useRecoilState<ITypeProducts>(productState);
+  const [basketItem, setBasketItem] = useRecoilState<ITypeProducts | {}>(addProductState);
+
+  const [isCardModal, setIsCardModal] = useState(true);
 
   const onClickAddBasket = () => {
-    setBasketItem(product);
+    // 선택한 메뉴를 주문 목록에 추가하는 로직
+    const newBasket = [...basketItem, product, ...options];
+    setBasketItem(newBasket);
+    console.log("야야야야" + newBasket);
+
+    // 페이지 이동이 필요한 경우 React Router를 사용하여 이동할 수 있습니다.
+    // history.push("/order"); // 예시로, 주문 페이지의 경로입니다. 필요에 따라 주석을 해제하고 경로를 수정하세요.
   };
 
   const onClickCloseModal = () => {
-    setIsModalClose(false);
+    setIsCardModal(false);
   };
 
-  if (!isModalClose) {
+  if (!isCardModal) {
     // 모달이 닫혔을 때
     return null; // 또는 다른 방식으로 모달을 렌더링하지 않도록 처리
   }
@@ -58,15 +64,14 @@ export const Modal01 = () => {
             {/* <span style={{ cursor: "pointer" }} onClick={onClickCloseModal}>
                 X
               </span> */}
+            {/* </ModalClose> */}
 
             <ReleaseBtn
               style={{ cursor: "pointer" }}
               onClick={onClickCloseModal}
             >
-              {" "}
-              X{" "}
+              X
             </ReleaseBtn>
-            {/* </ModalClose> */}
 
             {/* 상품 이름 */}
             <ProductName>{product.name}</ProductName>
@@ -101,7 +106,7 @@ export const Modal01 = () => {
           </ProductOption>
 
           <AddBtn>
-            <Button01 btnText="choice" onClickBtn={onClickAddBasket} />
+            <Button02 btnText="choice1111" onClickBtn={onClickAddBasket} />
           </AddBtn>
         </ProductInfo>
       </ModalContainer>
