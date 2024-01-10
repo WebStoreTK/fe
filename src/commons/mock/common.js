@@ -489,26 +489,66 @@ const juice = [
   },
 ];
 
-const desert = [
+const food = [
   {
-    categoryId: "desert",
-    name: "딸기 마카롱",
-    price: 2000,
+    categoryId: "food",
+    name: "클래식 스콘",
+    price: 3300,
   },
   {
-    categoryId: "desert",
-    name: "초코 마카롱",
-    price: 2000,
+    categoryId: "food",
+    name: "미니 클래식 스콘",
+    price: 4000,
   },
   {
-    categoryId: "desert",
-    name: "초코칩 쿠키",
-    price: 1500,
+    categoryId: "food",
+    name: "연유 밀크모닝",
+    price: 4300,
   },
   {
-    categoryId: "desert",
-    name: "아몬드 쿠키",
-    price: 1500,
+    categoryId: "food",
+    name: "탕종 플레인 베이글",
+    price: 3300,
+  },
+  {
+    categoryId: "food",
+    name: "탕종 블루베리 베이글",
+    price: 3500,
+  },
+  {
+    categoryId: "food",
+    name: "탕종 파마산 치즈 베이글",
+    price: 3500,
+  },
+  {
+    categoryId: "food",
+    name: "바질 토마토 크림치즈 베이글",
+    price: 5300,
+  },
+  {
+    categoryId: "food",
+    name: "초콜릿 월넛 브레드",
+    price: 4500,
+  },
+  {
+    categoryId: "food",
+    name: "바질 치즈 포카치아",
+    price: 5000,
+  },
+  {
+    categoryId: "food",
+    name: "한 입에 쏙 치즈 꿀 볼",
+    price: 4700,
+  },
+  {
+    categoryId: "food",
+    name: "하트 파이",
+    price: 3200,
+  },
+  {
+    categoryId: "food",
+    name: "미니 리프 파이",
+    price: 3900,
   },
 ];
 
@@ -526,12 +566,12 @@ export const categories = [
     name: "Juice",
   },
   {
-    id: "desert",
-    name: "Desert",
+    id: "food",
+    name: "Food",
   },
 ];
 
-export const products = [...coffee, ...milktea, ...juice, ...desert];
+export const products = [...coffee, ...milktea, ...juice, ...food];
 
 export const coupons = [
   {
