@@ -564,6 +564,46 @@ const tea = [
 
   {
     categoryId: "tea",
+    name: "아이스 얼 그레이 티",
+    price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
     name: "유스베리 티",
     price: 4500,
     sizeOption: [
@@ -804,8 +844,88 @@ const tea = [
 
   {
     categoryId: "tea",
-    name: "잉클리쉬 블렉퍼스트 티",
+    name: "아이스 제주 유기 녹차",
+    price: 5300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "잉글리쉬 블렉퍼스트 티",
     price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+  
+  {
+    categoryId: "tea",
+    name: "제주 유기농 말차로 만든 라떼",
+    price: 6100,
     sizeOption: [
       {
         name: "톨",
@@ -843,58 +963,432 @@ const tea = [
   },
 
 
+
 ];
 
-const juice = [
+const frappuccino = [
   {
-    categoryId: "juice",
-    name: "수박쥬스",
-    price: 4000,
-  },
-  {
-    categoryId: "juice",
-    name: "딸기쥬스",
-    price: 3500,
+    categoryId: "frappuccino",
+    name: "초콜릿 크림 칩 프라푸치노",
+    price: 6000,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
     option: [
       {
-        name: "딸기 2배",
-        price: 1000,
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
   },
+
   {
-    categoryId: "juice",
-    name: "망고쥬스",
+    categoryId: "frappuccino",
+    name: "화이트 초콜릿 모카 프라푸치노",
+    price: 6000,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "카라멜 프라푸치노",
+    price: 5900,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "에스프레소 프라푸치노",
+    price: 5500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "제주 유기농 말차로 만든 크림 프라푸치노",
+    price: 6300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "초콜릿 크림 칩 프라푸치노",
+    price: 6000,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "화이트 타이거 프라푸치노",
+    price: 6500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "피스타치오 초콜릿 프라푸치노",
+    price: 6300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "자바 칩 프라푸치노",
+    price: 6300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+];
+
+const food = [
+  {
+    categoryId: "food",
+    name: "클래식 스콘",
+    price: 3300,
+  },
+  {
+    categoryId: "food",
+    name: "미니 클래식 스콘",
+    price: 4000,
+  },
+  {
+    categoryId: "food",
+    name: "연유 밀크모닝",
+    price: 4300,
+  },
+  {
+    categoryId: "food",
+    name: "탕종 플레인 베이글",
+    price: 3300,
+  },
+  {
+    categoryId: "food",
+    name: "탕종 블루베리 베이글",
+    price: 3500,
+  },
+  {
+    categoryId: "food",
+    name: "탕종 파마산 치즈 베이글",
+    price: 3500,
+  },
+  {
+    categoryId: "food",
+    name: "바질 토마토 크림치즈 베이글",
+    price: 5300,
+  },
+  {
+    categoryId: "food",
+    name: "초콜릿 월넛 브레드",
     price: 4500,
   },
   {
-    categoryId: "juice",
-    name: "복숭아쥬스",
-    price: 3500,
-  },
-];
-
-const desert = [
-  {
-    categoryId: "desert",
-    name: "딸기 마카롱",
-    price: 2000,
+    categoryId: "food",
+    name: "바질 치즈 포카치아",
+    price: 5000,
   },
   {
-    categoryId: "desert",
-    name: "초코 마카롱",
-    price: 2000,
+    categoryId: "food",
+    name: "한 입에 쏙 치즈 꿀 볼",
+    price: 4700,
   },
   {
-    categoryId: "desert",
-    name: "초코칩 쿠키",
-    price: 1500,
+    categoryId: "food",
+    name: "하트 파이",
+    price: 3200,
   },
   {
-    categoryId: "desert",
-    name: "아몬드 쿠키",
-    price: 1500,
+    categoryId: "food",
+    name: "미니 리프 파이",
+    price: 3900,
   },
 ];
 
@@ -908,16 +1402,17 @@ export const categories = [
     name: "Tea",
   },
   {
-    id: "juice",
-    name: "Juice",
+    id: "frappuccino",
+    name: "Frappuccino",
   },
   {
-    id: "desert",
-    name: "Desert",
+    id: "food",
+    name: "Food",
   },
 ];
 
-export const products = [...coffee, ...tea, ...juice, ...desert];
+export const products = [...coffee, ...tea, ...frappuccino, ...food];
+
 
 export const coupons = [
   {
