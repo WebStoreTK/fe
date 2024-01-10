@@ -41,12 +41,39 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
+    name: "아이스 아메리카노",
+    price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
@@ -54,12 +81,39 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
+    name: "콜드 브루",
+    price: 4900,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
@@ -67,60 +121,39 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "콜드브루",
-    price: 1900,
-  },
-
-  {
-    categoryId: "coffee",
-    name: "아바라",
-    price: 2000,
-    option: [
+    name: "카라멜 마끼아또",
+    price: 5900,
+    sizeOption: [
       {
-        name: "2샷",
-        price: 500,
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
         state: false,
       },
     ],
-  },
-  {
-    categoryId: "coffee",
-    name: "카페라떼",
-    price: 2800,
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
         state: false,
       },
-    ],
-  },
-
-  {
-    categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "카라멜",
+        price: 0,
         state: false,
       },
-    ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
@@ -128,49 +161,39 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
+    name: "카페 라떼",
+    price: 5000,
+    sizeOption: [
       {
-        name: "2샷",
-        price: 500,
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
         state: false,
       },
     ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
         state: false,
       },
-    ],
-  },
-
-  {
-    categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "카라멜",
+        price: 0,
         state: false,
       },
-    ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
@@ -178,49 +201,39 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
+    name: "아이스 카페 라떼",
+    price: 5000,
+    sizeOption: [
       {
-        name: "2샷",
-        price: 500,
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
         state: false,
       },
     ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
         state: false,
       },
-    ],
-  },
-
-  {
-    categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "카라멜",
+        price: 0,
         state: false,
       },
-    ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
@@ -228,49 +241,39 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
+    name: "카푸치노",
+    price: 5000,
+    sizeOption: [
       {
-        name: "2샷",
-        price: 500,
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
         state: false,
       },
     ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
         state: false,
       },
-    ],
-  },
-
-  {
-    categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "카라멜",
+        price: 0,
         state: false,
       },
-    ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
@@ -278,49 +281,39 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
+    name: "에스프레소",
+    price: 4500,
+    sizeOption: [
       {
-        name: "2샷",
-        price: 500,
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
         state: false,
       },
     ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
         state: false,
       },
-    ],
-  },
-
-  {
-    categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "카라멜",
+        price: 0,
         state: false,
       },
-    ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
@@ -328,49 +321,39 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
+    name: "카페 모카",
+    price: 5500,
+    sizeOption: [
       {
-        name: "2샷",
-        price: 500,
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
         state: false,
       },
     ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
         state: false,
       },
-    ],
-  },
-
-  {
-    categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "카라멜",
+        price: 0,
         state: false,
       },
-    ],
-  },
-  {
-    categoryId: "coffee",
-    name: "헤이즐넛 아메리카노",
-    price: 2000,
-    option: [
       {
-        name: "2샷",
-        price: 500,
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
@@ -378,115 +361,972 @@ const coffee = [
 
   {
     categoryId: "coffee",
-    name: "허니 아메리카노",
-    price: 2000,
+    name: "스타벅스 돌체 라떼",
+    price: 5900,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
   },
+
+  {
+    categoryId: "coffee",
+    name: "화이트 초콜릿 모카",
+    price: 5900,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "coffee",
+    name: "토피넛 라떼",
+    price: 6300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
 ];
 
-const milktea = [
+const tea = [
   {
-    categoryId: "milktea",
-    name: "얼그레이 밀크티",
-    price: 3000,
-    option: [
+    categoryId: "tea",
+    name: "자몽 허니 블랙 티",
+    price: 5700,
+    sizeOption: [
       {
-        name: "두유로 변경",
+        name: "톨",
         price: 0,
         state: false,
       },
       {
-        name: "2샷",
-        price: 500,
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
         state: false,
       },
     ],
-  },
-  {
-    categoryId: "milktea",
-    name: "얼그레이 버블티",
-    price: 3500,
     option: [
       {
-        name: "2샷",
+        name: "바닐라",
         price: 500,
         state: false,
       },
       {
-        name: "버블 추가",
-        price: 1000,
+        name: "카라멜",
+        price: 0,
         state: false,
       },
       {
-        name: "두유로 변경",
+        name: "헤이즐넛",
         price: 0,
         state: false,
       },
     ],
   },
+
   {
-    categoryId: "milktea",
-    name: "딸기라떼",
+    categoryId: "tea",
+    name: "얼 그레이 티",
     price: 4500,
-  },
-  {
-    categoryId: "milktea",
-    name: "초코라떼",
-    price: 3500,
-  },
-  {
-    categoryId: "milktea",
-    name: "녹차라떼",
-    price: 3500,
-  },
-  {
-    categoryId: "milktea",
-    name: "흑임자라떼",
-    price: 3500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
     option: [
       {
-        name: "두유로 변경",
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
         price: 0,
         state: false,
       },
     ],
   },
+
+  {
+    categoryId: "tea",
+    name: "아이스 얼 그레이 티",
+    price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "유스베리 티",
+    price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "히비스커스 블렌드 티",
+    price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "캐모마일 블랜드 티",
+    price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "스타벅스 클래식 밀크 티",
+    price: 5900,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "유자 민트 티",
+    price: 5900,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "제주 유기 녹차",
+    price: 5300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "아이스 제주 유기 녹차",
+    price: 5300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "tea",
+    name: "잉글리쉬 블렉퍼스트 티",
+    price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+  
+  {
+    categoryId: "tea",
+    name: "제주 유기농 말차로 만든 라떼",
+    price: 6100,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+
+
 ];
 
-const juice = [
+const frappuccino = [
   {
-    categoryId: "juice",
-    name: "수박쥬스",
-    price: 4000,
-  },
-  {
-    categoryId: "juice",
-    name: "딸기쥬스",
-    price: 3500,
+    categoryId: "frappuccino",
+    name: "초콜릿 크림 칩 프라푸치노",
+    price: 6000,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
     option: [
       {
-        name: "딸기 2배",
-        price: 1000,
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
         state: false,
       },
     ],
   },
+
   {
-    categoryId: "juice",
-    name: "망고쥬스",
-    price: 4500,
+    categoryId: "frappuccino",
+    name: "화이트 초콜릿 모카 프라푸치노",
+    price: 6000,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
   },
+
   {
-    categoryId: "juice",
-    name: "복숭아쥬스",
-    price: 3500,
+    categoryId: "frappuccino",
+    name: "카라멜 프라푸치노",
+    price: 5900,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
   },
+
+  {
+    categoryId: "frappuccino",
+    name: "에스프레소 프라푸치노",
+    price: 5500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "제주 유기농 말차로 만든 크림 프라푸치노",
+    price: 6300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "초콜릿 크림 칩 프라푸치노",
+    price: 6000,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "화이트 타이거 프라푸치노",
+    price: 6500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "피스타치오 초콜릿 프라푸치노",
+    price: 6300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
+  {
+    categoryId: "frappuccino",
+    name: "자바 칩 프라푸치노",
+    price: 6300,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
+    option: [
+      {
+        name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "헤이즐넛",
+        price: 0,
+        state: false,
+      },
+    ],
+  },
+
 ];
 
 const food = [
@@ -558,12 +1398,12 @@ export const categories = [
     name: "Coffee",
   },
   {
-    id: "milktea",
-    name: "Milk Tea",
+    id: "tea",
+    name: "Tea",
   },
   {
-    id: "juice",
-    name: "Juice",
+    id: "frappuccino",
+    name: "Frappuccino",
   },
   {
     id: "food",
@@ -571,7 +1411,8 @@ export const categories = [
   },
 ];
 
-export const products = [...coffee, ...milktea, ...juice, ...food];
+export const products = [...coffee, ...tea, ...frappuccino, ...food];
+
 
 export const coupons = [
   {

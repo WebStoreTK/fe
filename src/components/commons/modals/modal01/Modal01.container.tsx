@@ -27,7 +27,6 @@ import { useRecoilState } from "recoil";
 export const Modal01 = () => {
   const [options, setOptions] = useState([]);
   const [size, setSizeOptions] = useState([]);
-
   const [product, setProduct] = useRecoilState<ITypeProducts>(productState);
   const [basketItem, setBasketItem] = useRecoilState<ITypeProducts[]>(addProductState);
 
@@ -38,6 +37,7 @@ export const Modal01 = () => {
       setBasketItem(newBasket);
       console.log("선택 :", newBasket);
   };
+  
 
   const onClickCloseModal = () => {
     setIsCardModal(false);
@@ -54,6 +54,13 @@ export const Modal01 = () => {
         <ProductImage></ProductImage>
         <ProductInfo>
           <ProductTop>
+            {/* 모달 닫기 */}
+            {/* <ModalClose> */}
+            {/* <span style={{ cursor: "pointer" }} onClick={onClickCloseModal}>
+                X
+              </span> */}
+            {/* </ModalClose> */}
+
             <ReleaseBtn
               style={{ cursor: "pointer" }}
               onClick={onClickCloseModal}
@@ -74,12 +81,12 @@ export const Modal01 = () => {
 
           <ProductOption>
             <OptionTitle>사이즈 옵션</OptionTitle>
-            {product.sizeOption?.length === 0 ? (
-              <div>사이즈 옵션이 없습니다.</div>
-            ) : (
-              <OptionContainer>
-                {product.sizeOption?.map(
-                  (si: ITypeSizeOption, index: number) => (
+              {product.sizeOption?.length === 0 ? (
+                <div>사이즈 옵션이 없습니다.</div>
+              ) : (
+                <OptionContainer>
+                  {product.sizeOption?.map(
+                    (si: ITypeSizeOption, index: number) => (
                     <Fragment key={index}>
                       <SizeOptions
                         sizeOption={si}
@@ -87,10 +94,9 @@ export const Modal01 = () => {
                         setSelectedSize={setSizeOptions}
                       />
                     </Fragment>
-                  )
-                )}
-              </OptionContainer>
-            )}
+                  ))}
+                </OptionContainer>
+              )}
           </ProductOption>
 
           <ProductOption>

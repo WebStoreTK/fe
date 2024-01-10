@@ -12,7 +12,6 @@ import { useState } from "react";
 export const Basket = () => {
   const [orders, setOrders] = useState([]); // 초기 주문 목록을 빈 배열로 설정
   const [totalPayment, setTotalPayment] = useState(0);
-
   const handleOrder = (menuItem) => {
     const newOrders = [...orders, menuItem];
     setOrders(newOrders);
