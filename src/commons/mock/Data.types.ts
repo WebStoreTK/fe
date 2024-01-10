@@ -12,9 +12,16 @@ export interface ITypeProducts {
   categoryId: string;
   name: string;
   price: number;
+  sizeOption?: ITypeSizeOption[] | []; 
   option?: ITypeProductOption[] | [];
 }
 export interface ITypeProductOption {
+  name: string;
+  price: number;
+  state: boolean;
+}
+
+export interface ITypeSizeOption {
   name: string;
   price: number;
   state: boolean;

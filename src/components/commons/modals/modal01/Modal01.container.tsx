@@ -12,10 +12,11 @@ import {
   ProductTop,
   Wrapper,
 } from "./Modal01.style";
-import { Options } from "../../option/Option.container";
+import { Options, SizeOptions} from "../../option/Option.container";
 import {
   ITypeProductOption,
   ITypeProducts,
+  ITypeSizeOption,
 } from "../../../../commons/mock/Data.types";
 import { Button01 } from "../../buttons/button01/Button01.container";
 import { Fragment, useEffect, useState } from "react";
@@ -25,10 +26,12 @@ import { useRecoilState } from "recoil";
 
 export const Modal01 = () => {
   const [options, setOptions] = useState([]);
+  const [size, setSizeOptions] = useState([]);
   const [product] = useRecoilState<ITypeProducts>(productState);
   const [basketItem, setBasketItem] =
     useRecoilState<ITypeProducts>(addProductState);
   const [isModalClose, setIsModalClose] = useState(true);
+
 
   const onClickAddBasket = () => {
     setBasketItem(product);
@@ -78,6 +81,26 @@ export const Modal01 = () => {
 
             <Quantity />
           </ProductTop>
+
+          <ProductOption>
+            <OptionTitle>사이즈 옵션</OptionTitle>
+              {product.sizeOption?.length === 0 ? (
+                <div>사이즈 옵션이 없습니다.</div>
+              ) : (
+                <OptionContainer>
+                  {product.sizeOption?.map(
+                    (si: ITypeSizeOption, index: number) => (
+                    <Fragment key={index}>
+                      <SizeOptions
+                        sizeOption={si}
+                        selectedSize={size}
+                        setSelectedSize={setSizeOptions}
+                      />
+                    </Fragment>
+                  ))}
+                </OptionContainer>
+              )}
+          </ProductOption>
 
           <ProductOption>
             <OptionTitle>옵션</OptionTitle>
