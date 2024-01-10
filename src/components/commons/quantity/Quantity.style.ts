@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 5px;
+    font-weight: bold;
   }
   svg {
     cursor: pointer;

@@ -84,7 +84,7 @@ export const OptionTitle = styled.p`
   font-size: 1.3em;
   font-weight: bold;
   height: 43px;
-  background: #ffffbb;
+  background: #cbefd5;
 `;
 
 export const OptionContainer = styled.div`
@@ -117,5 +117,5 @@ export const ReleaseBtn = styled.div`
   // background-color: transparent;
   font-size: 35px;
   font-weight: bolder;
-  background: #99004c;
+  background: #0000a0;
 `;
