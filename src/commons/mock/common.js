@@ -1,31 +1,38 @@
 const coffee = [
   {
     categoryId: "coffee",
-    name: "아메리카노",
-    price: 1500,
+    name: "따뜻한 아메리카노",
+    price: 4500,
+    sizeOption: [
+      {
+        name: "톨",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "그란데",
+        price: 0,
+        state: false,
+      },
+      {
+        name: "벤티",
+        price: 0,
+        state: false,
+      },
+    ],
     option: [
       {
         name: "바닐라",
+        price: 500,
+        state: false,
+      },
+      {
+        name: "카라멜",
         price: 0,
         state: false,
       },
       {
-        name: "바닐라22",
-        price: 0,
-        state: false,
-      },
-      {
-        name: "바닐라333",
-        price: 0,
-        state: false,
-      },
-      {
-        name: "얼음 111",
-        price: 0,
-        state: false,
-      },
-      {
-        name: "얼음 3333",
+        name: "헤이즐넛",
         price: 0,
         state: false,
       },
