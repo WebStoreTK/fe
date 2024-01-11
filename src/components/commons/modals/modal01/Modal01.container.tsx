@@ -54,7 +54,7 @@ export const Modal01 = () => {
   return (
     <Wrapper>
       <ModalContainer>
-        <ProductImage></ProductImage>
+        <ProductImage><img src={product.image} alt="menus"/></ProductImage>
         <ProductInfo>
           <ProductTop>
             <ReleaseBtn
