@@ -27,17 +27,20 @@ import { useRecoilState } from "recoil";
 export const Modal01 = () => {
   const [options, setOptions] = useState([]);
   const [size, setSizeOptions] = useState([]);
-  const [product, setProduct] = useRecoilState<ITypeProducts>(productState);
-  const [basketItem, setBasketItem] = useRecoilState<ITypeProducts[]>(addProductState);
+  const [product] = useRecoilState<ITypeProducts>(productState);
+  const [basketItem, setBasketItem] =
+    useRecoilState<ITypeProducts[]>(addProductState);
 
   const [isCardModal, setIsCardModal] = useState(true);
 
   const onClickAddBasket = () => {
-      const newBasket = [...basketItem, product, ...options, ...size];
-      setBasketItem(newBasket);
-      console.log("선택 :", newBasket);
+    // 목록 추가
+    const newBasket = [...basketItem, product, ...options, ...size];
+    setBasketItem(newBasket);
+    console.log("선택 :", newBasket);
+
+    // handleOrder(newBasket);
   };
-  
 
   const onClickCloseModal = () => {
     setIsCardModal(false);
@@ -45,7 +48,7 @@ export const Modal01 = () => {
 
   if (!isCardModal) {
     // 모달이 닫혔을 때
-    return null; // 또는 다른 방식으로 모달을 렌더링하지 않도록 처리
+    return null; 
   }
 
   return (
@@ -54,13 +57,6 @@ export const Modal01 = () => {
         <ProductImage></ProductImage>
         <ProductInfo>
           <ProductTop>
-            {/* 모달 닫기 */}
-            {/* <ModalClose> */}
-            {/* <span style={{ cursor: "pointer" }} onClick={onClickCloseModal}>
-                X
-              </span> */}
-            {/* </ModalClose> */}
-
             <ReleaseBtn
               style={{ cursor: "pointer" }}
               onClick={onClickCloseModal}
@@ -81,12 +77,12 @@ export const Modal01 = () => {
 
           <ProductOption>
             <OptionTitle>사이즈 옵션</OptionTitle>
-              {product.sizeOption?.length === 0 ? (
-                <div>사이즈 옵션이 없습니다.</div>
-              ) : (
-                <OptionContainer>
-                  {product.sizeOption?.map(
-                    (si: ITypeSizeOption, index: number) => (
+            {product.sizeOption?.length === 0 ? (
+              <div>사이즈 옵션이 없습니다.</div>
+            ) : (
+              <OptionContainer>
+                {product.sizeOption?.map(
+                  (si: ITypeSizeOption, index: number) => (
                     <Fragment key={index}>
                       <SizeOptions
                         sizeOption={si}
@@ -94,9 +90,10 @@ export const Modal01 = () => {
                         setSelectedSize={setSizeOptions}
                       />
                     </Fragment>
-                  ))}
-                </OptionContainer>
-              )}
+                  )
+                )}
+              </OptionContainer>
+            )}
           </ProductOption>
 
           <ProductOption>
@@ -123,6 +120,7 @@ export const Modal01 = () => {
           <AddBtn>
             <Button02 btnText="choice2222" onClickBtn={onClickAddBasket} />
           </AddBtn>
+
         </ProductInfo>
       </ModalContainer>
     </Wrapper>
