@@ -88,7 +88,8 @@ export const OptionTitle = styled.p`
 
 export const OptionContainer = styled.div`
   display: flex;
-  gap: 10px;
+  height: 45px;
+  gap: 50px;
   background: #ffa873;
 `;
 export const AddBtn = styled.div`

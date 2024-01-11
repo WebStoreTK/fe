@@ -1,3 +1,4 @@
+import React from 'react';
 import { IPropsCard01 } from "./Card01.types";
 import {
   AddBtn,
@@ -9,10 +10,14 @@ import {
 } from "./Card01.style";
 import { Button01 } from "../../buttons/button01/Button01.container";
 
+
+
 export const Card01 = (props: IPropsCard01) => {
+
+
   return (
     <Wrapper>
-      <ProductImage></ProductImage>
+      <ProductImage><img src={props.product.image}/></ProductImage>
       <ProductInfo>
         <ProductName>{props.product.name}</ProductName>
         <ProductPrice>

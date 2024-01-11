@@ -33,7 +33,7 @@ export const GlobalStyle = css`
   button {
     border: 0;
     cursor: pointer;
-    background: #fff;
+    background: #ffffff;
   }
   input {
     font-size: 15px;

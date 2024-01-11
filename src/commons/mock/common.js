@@ -3,6 +3,7 @@ const coffee = [
     categoryId: "coffee",
     name: "따뜻한 아메리카노",
     price: 4500,
+    image: '/images/hotamericano.jpg',
     sizeOption: [
       {
         name: "톨",
