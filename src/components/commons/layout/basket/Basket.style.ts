@@ -11,6 +11,11 @@ export const Wrapper = styled.div`
 
 export const Order = styled.div``;
 
+export const OrderList = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Title = styled.span`
   display: flex;
   align-items: center;
