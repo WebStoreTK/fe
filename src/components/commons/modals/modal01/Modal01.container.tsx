@@ -20,7 +20,7 @@ import {
 } from "../../../../commons/mock/Data.types";
 import { Button02 } from "../../buttons/button01/Button01.container";
 import { Fragment, useState } from "react";
-import { Quantity } from "../../quantity/Quantity.container";
+// import { Quantity } from "../../quantity/Quantity.container";
 import { addProductState, productState } from "../../../../commons/store/store";
 import { useRecoilState } from "recoil";
 
@@ -72,7 +72,9 @@ export const Modal01 = () => {
               <span>{product.price}</span>원
             </ProductPrice>
 
-            <Quantity />
+            {/* <Quantity/> */}
+
+            
           </ProductTop>
 
           <ProductOption>
