@@ -1,50 +1,16 @@
 const coffee = [
   {
     categoryId: "coffee",
-    name: "따뜻한 아메리카노",
+    name: "카페 아메리카노",
     price: 4500,
     image: 'https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[94]_20210430103337006.jpg',
-    sizeOption: [
+    iceOption: [
       {
-        name: "톨",
-        price: 0,
-        state: false,
-      },
-      {
-        name: "그란데",
-        price: 0,
-        state: false,
-      },
-      {
-        name: "벤티",
+        name: "아이스",
         price: 0,
         state: false,
       },
     ],
-    option: [
-      {
-        name: "바닐라",
-        price: 500,
-        state: false,
-      },
-      {
-        name: "카라멜",
-        price: 0,
-        state: false,
-      },
-      {
-        name: "헤이즐넛",
-        price: 0,
-        state: false,
-      },
-    ],
-  },
-
-  {
-    categoryId: "coffee",
-    name: "아이스 아메리카노",
-    price: 4500,
-    image: 'https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[110563]_20210426095937808.jpg',
     sizeOption: [
       {
         name: "톨",
@@ -86,6 +52,13 @@ const coffee = [
     name: "콜드 브루",
     price: 4900,
     image: 'https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000038]_20210430113202458.jpg',
+    iceOption: [
+      {
+        name: "Only Ice",
+        price: 0,
+        state: true,
+      },
+    ],
     sizeOption: [
       {
         name: "톨",

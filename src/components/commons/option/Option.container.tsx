@@ -1,6 +1,6 @@
 import { Option, Wrapper } from "./Option.style";
 import { useEffect, useState } from "react";
-import { IPropsOptions, IPropsSizeOptions} from "./Option.types";
+import { IPropsIceOptions, IPropsOptions, IPropsSizeOptions} from "./Option.types";
 import { useRecoilState } from "recoil";
 import {
   ITypeProductOption,
@@ -86,9 +86,12 @@ export const SizeOptions = (props: IPropsSizeOptions) => {
   const onClickSizeOption = (name: string) => () => {
     const updatedSizeOptions = product.sizeOption?.map((sizeOption) => {
       if (sizeOption.name === name) {
-        return { ...sizeOption, state: !sizeOption.state };
+        // 클릭된 옵션은 선택 상태로 변경
+        return { ...sizeOption, state: true };
+      } else {
+        // 나머지 옵션들은 선택 해제 상태로 변경
+        return { ...sizeOption, state: false };
       }
-      return sizeOption;
     });
 
     const updatedProduct = { ...product, sizeOption: updatedSizeOptions };
@@ -114,10 +117,62 @@ export const SizeOptions = (props: IPropsSizeOptions) => {
       >
         <p>{props.sizeOption.name}</p>
         {props.sizeOption.price === 0 ? (
-          <em>무료</em>
+          <em></em>
         ) : (
           <em>
             +<span>{props.sizeOption.price}</span>원
+          </em>
+        )}
+      </Option>
+    </Wrapper>
+  );
+};
+
+//아이스 옵션 추가
+export const IceOptions = (props: IPropsIceOptions) => {
+  const [product, setProduct] = useRecoilState<ITypeProducts>(productState);
+
+  const onClickIceOption = (name: string) => () => {
+
+      // "Only Ice" 일때는 상태를 변경못하게 함
+      if (name === "Only Ice") {
+        return;
+      }
+
+    const updatedIceOptions = product.iceOption?.map((iceOption) => {
+      if (iceOption.name === name) {
+        return { ...iceOption, state: !iceOption.state };
+      }
+      return iceOption;
+    });
+
+    const updatedProduct = { ...product, iceOption: updatedIceOptions };
+    setProduct(updatedProduct);
+
+    if (updatedIceOptions) {
+      updatedIceOptions.forEach((iceOption) => {
+        console.log(`아이스 옵션 ${iceOption.name}의 상태:`, iceOption.state);
+      });
+    }
+    
+  };
+
+  useEffect(() => {
+    console.log(product.iceOption?.state);
+  }, []);
+
+  return (
+    <Wrapper>
+      <Option
+        className={props.iceOption?.state ? "on" : ""}
+        onClick={onClickIceOption(props.iceOption.name)}
+      >
+        <p>{props.iceOption.name}</p>
+        {props.iceOption.price === 0 ? (
+          <em></em>
+        ) : (
+          <em>
+            +<span>{props.iceOption.price}</span>원
           </em>
         )}
       </Option>

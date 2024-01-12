@@ -18,11 +18,11 @@ export const ModalContainer = styled.div`
   transform: translate(-50%, -50%);
   display: flex;
   width: 800px;
-  height: 500px;
+  height: 550px;
   background: ${Common.color.white};
   border-radius: 10px;
   padding: 20px;
-  gap: 30px;
+  gap: 10px;
 `;
 
 export const ProductImage = styled.div`

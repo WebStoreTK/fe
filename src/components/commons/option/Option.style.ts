@@ -12,7 +12,7 @@ export const Option = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
+    width: 100px;
     padding: 10px;
     border-radius: 10px;
     font-size: 1em;
