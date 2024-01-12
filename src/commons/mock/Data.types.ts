@@ -13,6 +13,7 @@ export interface ITypeProducts {
   name: string;
   price: number;
   image: string;
+  iceOption?: ITypeIceOption[] | [];
   sizeOption?: ITypeSizeOption[] | []; 
   option?: ITypeProductOption[] | [];
 }
@@ -23,6 +24,12 @@ export interface ITypeProductOption {
 }
 
 export interface ITypeSizeOption {
+  name: string;
+  price: number;
+  state: boolean;
+}
+
+export interface ITypeIceOption {
   name: string;
   price: number;
   state: boolean;

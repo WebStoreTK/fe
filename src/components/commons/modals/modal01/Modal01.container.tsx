@@ -12,11 +12,12 @@ import {
   ProductTop,
   Wrapper,
 } from "./Modal01.style";
-import { Options, SizeOptions } from "../../option/Option.container";
+import { IceOptions, Options, SizeOptions } from "../../option/Option.container";
 import {
   ITypeProductOption,
   ITypeProducts,
   ITypeSizeOption,
+  ITypeIceOption,
 } from "../../../../commons/mock/Data.types";
 import { Button02 } from "../../buttons/button01/Button01.container";
 import { Fragment, useState } from "react";
@@ -25,6 +26,7 @@ import { addProductState, productState } from "../../../../commons/store/store";
 import { useRecoilState } from "recoil";
 
 export const Modal01 = () => {
+  const [iced, setIceOptions] = useState([]);
   const [options, setOptions] = useState([]);
   const [size, setSizeOptions] = useState([]);
   const [product] = useRecoilState<ITypeProducts>(productState);
@@ -35,7 +37,7 @@ export const Modal01 = () => {
 
   const onClickAddBasket = () => {
     // 목록 추가
-    const newBasket = [...basketItem, product, ...options, ...size];
+    const newBasket = [...basketItem, product,...iced, ...options, ...size];
     setBasketItem(newBasket);
     console.log("선택 :", newBasket);
 
@@ -76,7 +78,28 @@ export const Modal01 = () => {
           </ProductTop>
 
           <ProductOption>
-            <OptionTitle>사이즈 옵션</OptionTitle>
+            <OptionTitle></OptionTitle>
+            {product.sizeOption?.length === 0 ? (
+              <div>아이스 옵션이 없습니다.</div>
+            ) : (
+              <OptionContainer>
+                {product.iceOption?.map(
+                  (si: ITypeIceOption, index: number) => (
+                    <Fragment key={index}>
+                      <IceOptions
+                        iceOption={si}
+                        selectedIce={iced}
+                        setSelectedIce={setIceOptions}
+                      />
+                    </Fragment>
+                  )
+                )}
+              </OptionContainer>
+            )}
+          </ProductOption>
+
+          <ProductOption>
+            <OptionTitle>사이즈</OptionTitle>
             {product.sizeOption?.length === 0 ? (
               <div>사이즈 옵션이 없습니다.</div>
             ) : (
