@@ -1,12 +1,11 @@
-// basketUtils.ts
+// // basketUtils.ts
 
 import { useRecoilState } from "recoil";
 import { addProductState } from "../../../../commons/store/store";
 import { ITypeProducts } from "../../../../commons/mock/Data.types";
 
 export const useBasket = () => {
-    const [basketItem, setBasketItem] =
-    useRecoilState<ITypeProducts[]>(addProductState);
+    const [basketItem, setBasketItem] = useRecoilState<ITypeProducts[]>(addProductState);
 
     const handleOrder = (newOrders: ITypeProducts[]) => {
     // 주문 처리
@@ -22,7 +21,9 @@ export const useBasket = () => {
     const addToBasket = (product: ITypeProducts, options: any[], size: any[]) => {
     // 목록 추가
     const newBasket = [...basketItem, product, ...options, ...size];
+
     setBasketItem(newBasket);
+
     console.log("선택 :", newBasket);
 
     handleOrder(newBasket);
@@ -30,3 +31,5 @@ export const useBasket = () => {
 
     return { basketItem, addToBasket };
 };
+
+
