@@ -23,11 +23,12 @@ export const ContentsUI = () => {
 
   const [_, setProduct] = useRecoilState<ITypeProducts>(productState);
 
-  const onClickOpenModal = (item) => () => {
-    setIsModal((prev: boolean) => !prev);
-    setProduct(item);
-    console.log(item);
-  };
+const onClickOpenModal = (item: ITypeProducts) => () => {
+  setIsModal((prev: boolean) => !prev);
+  setProduct(item);
+  console.log(item);
+};
+
 
   useEffect(() => {
     const getCategories = async () => {
