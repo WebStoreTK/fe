@@ -13,15 +13,13 @@ import { Button01 } from "../../buttons/button01/Button01.container";
 
 
 export const Card01 = (props: IPropsCard01) => {
-
-
   return (
     <Wrapper>
       <ProductImage><img src={props.product.image} alt="menus"/></ProductImage>
       <ProductInfo>
         <ProductName>{props.product.name}</ProductName>
         <ProductPrice>
-          <span>{props.product.price}</span>원
+          <span>{(new String(props.product.price)).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>원
         </ProductPrice>
         <AddBtn>
           <Button01
