@@ -3,6 +3,7 @@ import { Common } from "../../../../commons/style/emotion";
 
 export const Wrapper = styled.div`
   display: flex;
+  text-align: center;
   gap: 1em;
   height: 180px;
   padding: 1em;

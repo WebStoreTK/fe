@@ -138,13 +138,17 @@ export const IceOptions = (props: IPropsIceOptions) => {
       if (name === "Only Ice") {
         return;
       }
+      
 
-    const updatedIceOptions = product.iceOption?.map((iceOption) => {
-      if (iceOption.name === name) {
-        return { ...iceOption, state: !iceOption.state };
-      }
-      return iceOption;
-    });
+      const updatedIceOptions = product.iceOption?.map((iceOption) => {
+        if (iceOption.name === name) {
+          // 클릭된 옵션은 선택 상태로 변경
+          return { ...iceOption, state: true };
+        } else {
+          // 나머지 옵션들은 선택 해제 상태로 변경
+          return { ...iceOption, state: false };
+        }
+      });
 
     const updatedProduct = { ...product, iceOption: updatedIceOptions };
     setProduct(updatedProduct);
