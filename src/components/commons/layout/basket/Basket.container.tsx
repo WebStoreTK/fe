@@ -68,7 +68,16 @@
 // };
 
 import React, { useEffect, useState } from "react";
-import { AllPayment, Order, Payment, PaymentBtn, PaymentInfo, OrderList, Title, Wrapper } from "./Basket.style";
+import {
+  AllPayment,
+  Order,
+  Payment,
+  PaymentBtn,
+  PaymentInfo,
+  OrderList,
+  Title,
+  Wrapper,
+} from "./Basket.style";
 import { useBasket } from "./basketUtils";
 import { Quantity } from "../../quantity/Quantity.container";
 
@@ -79,7 +88,8 @@ export const Basket = () => {
   const handlePayment = (newQuantity: number) => {
     // 주문한 메뉴들의 총 가격을 계산
     const newTotalPayment = basketItem.reduce(
-      (total, menuItem) => total + menuItem.price * newQuantity, 0
+      (total, menuItem) => total + menuItem.price * newQuantity,
+      0
     );
     setTotalPayment(newTotalPayment);
     console.log(newTotalPayment);
@@ -107,7 +117,9 @@ export const Basket = () => {
               메뉴 이름 : {menuItem.name}
               <br />
               가격 : {menuItem.price}원
-              <Quantity onChange={(newQuantity) => handlePayment(newQuantity)} />
+              <Quantity
+                onChange={(newQuantity) => handlePayment(newQuantity)}
+              />
             </div>
           ))}
         </OrderList>
@@ -118,7 +130,7 @@ export const Basket = () => {
         <AllPayment>
           <span>총 결제금액</span>
           <span>
-            <em>{totalPayment}</em>원
+            <em>{(new String(totalPayment)).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</em>원
           </span>
         </AllPayment>
 
