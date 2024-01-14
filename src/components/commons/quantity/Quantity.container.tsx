@@ -37,36 +37,81 @@
 //   )
 // };
 
-// Quantity.container.tsx
+// // Quantity.container.tsx
+// import React, { useState } from "react";
+// import { Wrapper, Minus, Plus } from "./Quantity.style";
+// import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
+
+// export const Quantity = ({ onChange }: { onChange: (newQuantity: number) => void }) => {
+//   const [quantity, setQuantity] = useState(1);
+
+//   const handleQuantityChange = (newQuantity : number) => {
+//     setQuantity(newQuantity);
+//     onChange(newQuantity); // 부모 컴포넌트에 새로운 수량 전달
+//   };
+
+//   const onClickBtn = (button : string) => () => {
+//     if (button === "minus") {
+//       if (quantity === 1) {
+//         alert("최소 수량은 1잔 입니다.");
+//       } else {
+//         handleQuantityChange(quantity - 1);
+//       }
+//     } else if (button === "plus") {
+//       if (quantity === 10) {
+//         alert("최대 수량은 10잔 입니다.");
+//       } else {
+//         handleQuantityChange(quantity + 1);
+//       }
+//     }
+//   };
+
+//   return (
+//     <Wrapper>
+//       <Minus onClick={onClickBtn("minus")}>
+//         <AiFillMinusCircle />
+//       </Minus>
+//       <span>{quantity}</span>
+//       <Plus onClick={onClickBtn("plus")}>
+//         <AiFillPlusCircle />
+//       </Plus>
+//     </Wrapper>
+//   );
+// };
+
+
 import React, { useState } from "react";
-import { Wrapper, Minus, Plus } from "./Quantity.style";
+import { Minus, Plus, Wrapper } from "./Quantity.style";
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 
-export const Quantity = ({ onChange }: { onChange: (newQuantity: number) => void }) => {
-  const [quantity, setQuantity] = useState(1);
+interface QuantityProps {
+  onChange: (newQuantity: number) => void;
+  defaultQuantity: number;
+}
 
-  const handleQuantityChange = (newQuantity : number) => {
-    setQuantity(newQuantity);
-    onChange(newQuantity); // 부모 컴포넌트에 새로운 수량 전달
+export const Quantity: React.FC<QuantityProps> = ({ onChange, defaultQuantity }) => {
+  const [quantity, setQuantity] = useState(defaultQuantity);
+
+  const onClickBtn = (button: string) => () => {
+    setQuantity((prev: number) => {
+      let newQuantity = prev;
+      if (button === "minus") {
+        if (newQuantity === 1) {
+          alert("최소 수량은 1잔 입니다.");
+        } else {
+          newQuantity = prev - 1;
+        }
+      } else if (button === "plus") {
+        if (newQuantity === 10) {
+          alert("최대 수량은 10잔 입니다.");
+        } else {
+          newQuantity = prev + 1;
+        }
+      }
+      onChange(newQuantity);
+      return newQuantity;
+    });
   };
-
-const onClickBtn = (button: "minus" | "plus") => () => {
-  if (button === "minus") {
-    if (quantity === 1) {
-      console.error("최소 수량은 1잔 입니다.");
-      return;
-    } else {
-      handleQuantityChange(quantity - 1);
-    }
-  } else if (button === "plus") {
-    if (quantity === 10) {
-      console.error("최대 수량은 10잔 입니다.");
-      return;
-    } else {
-      handleQuantityChange(quantity + 1);
-    }
-  }
-};
 
   return (
     <Wrapper>
@@ -80,3 +125,4 @@ const onClickBtn = (button: "minus" | "plus") => () => {
     </Wrapper>
   );
 };
+
