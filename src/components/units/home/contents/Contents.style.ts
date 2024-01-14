@@ -17,7 +17,7 @@ export const Title = styled.div`
 
 export const CardContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 20px;
   > div {
