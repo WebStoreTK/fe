@@ -16,6 +16,7 @@ export interface ITypeProducts {
   iceOption?: ITypeIceOption[] | [];
   sizeOption?: ITypeSizeOption[] | []; 
   option?: ITypeProductOption[] | [];
+  quantity: number;
 }
 export interface ITypeProductOption {
   name: string;
