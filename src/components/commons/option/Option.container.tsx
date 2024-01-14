@@ -56,9 +56,9 @@ export const Options = (props: IPropsOptions) => {
   //   });
   // };
   
-  useEffect(() => {
-    console.log(product.option?.state);
-  }, []);
+  // useEffect(() => {
+  //   console.log(product.option?.state);
+  // }, []);
 
   return (
     <Wrapper>
@@ -105,9 +105,9 @@ export const SizeOptions = (props: IPropsSizeOptions) => {
     
   };
 
-  useEffect(() => {
-    console.log(product.sizeOption?.state);
-  }, []);
+  // useEffect(() => {
+  //   console.log(product.sizeOption?.state);
+  // }, []);
 
   return (
     <Wrapper>
@@ -157,9 +157,9 @@ export const IceOptions = (props: IPropsIceOptions) => {
     
   };
 
-  useEffect(() => {
-    console.log(product.iceOption?.state);
-  }, []);
+  // useEffect(() => {
+  //   console.log(product.iceOption?.state);
+  // }, []);
 
   return (
     <Wrapper>

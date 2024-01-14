@@ -50,21 +50,23 @@ export const Quantity = ({ onChange }: { onChange: (newQuantity: number) => void
     onChange(newQuantity); // 부모 컴포넌트에 새로운 수량 전달
   };
 
-  const onClickBtn = (button : string) => () => {
-    if (button === "minus") {
-      if (quantity === 1) {
-        alert("최소 수량은 1잔 입니다.");
-      } else {
-        handleQuantityChange(quantity - 1);
-      }
-    } else if (button === "plus") {
-      if (quantity === 10) {
-        alert("최대 수량은 10잔 입니다.");
-      } else {
-        handleQuantityChange(quantity + 1);
-      }
+const onClickBtn = (button: "minus" | "plus") => () => {
+  if (button === "minus") {
+    if (quantity === 1) {
+      console.error("최소 수량은 1잔 입니다.");
+      return;
+    } else {
+      handleQuantityChange(quantity - 1);
     }
-  };
+  } else if (button === "plus") {
+    if (quantity === 10) {
+      console.error("최대 수량은 10잔 입니다.");
+      return;
+    } else {
+      handleQuantityChange(quantity + 1);
+    }
+  }
+};
 
   return (
     <Wrapper>
