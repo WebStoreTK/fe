@@ -79,7 +79,7 @@ import {
   Wrapper,
 } from "./Basket.style";
 import { useBasket } from "./basketUtils";
-import { Quantity } from "../../quantity/Quantity.container"; // 경로는 실제 폴더 구조에 맞게 변경
+// import { Quantity } from "../../quantity/Quantity.container"; 
 
 export const Basket = () => {
   const { basketItem } = useBasket();
@@ -119,11 +119,14 @@ export const Basket = () => {
               <br />
               가격 :{" "}
               {new String(menuItem.price).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원
+              <br />
               {/* Quantity 컴포넌트를 가져와서 사용 */}
-              <Quantity
+              {/* <Quantity
                 onChange={(newQuantity) => handlePayment(menuItem.name, newQuantity)}
                 defaultQuantity={menuItem.quantity || 1}
-              />
+              /> */}
+              {/* <Quantity/> */}
+              수량 : {menuItem.quantity}
             </div>
           ))}
         </OrderList>
