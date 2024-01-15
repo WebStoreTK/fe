@@ -37,7 +37,7 @@
 //   )
 // };
 
-// // Quantity.container.tsx
+// Quantity.container.tsx
 // import React, { useState } from "react";
 // import { Wrapper, Minus, Plus } from "./Quantity.style";
 // import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
