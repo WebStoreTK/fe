@@ -21,7 +21,7 @@ import {
 } from "../../../../commons/mock/Data.types";
 import { Button02 } from "../../buttons/button01/Button01.container";
 import { Fragment, useState } from "react";
-// import { Quantity } from "../../quantity/Quantity.container";
+import { Quantity } from "../../quantity/Quantity.container";
 import { addProductState, productState } from "../../../../commons/store/store";
 import { useRecoilState } from "recoil";
 
@@ -35,13 +35,35 @@ export const Modal01 = () => {
 
   const [isCardModal, setIsCardModal] = useState(true);
 
-  const onClickAddBasket = () => {
-    // 목록 추가
-    const newBasket = [...basketItem, product,...iced, ...options, ...size];
-    setBasketItem(newBasket);
-    console.log("선택 :", newBasket);
+  // const onClickAddBasket = () => {
+  //   // 목록 추가
+  //   const newBasket = [...basketItem, product,...iced, ...options, ...size];
+  //   setBasketItem(newBasket);
+  //   console.log("선택 :", newBasket);
 
-    // handleOrder(newBasket);
+  //   // handleOrder(newBasket);
+  // };
+
+  const onClickAddBasket = () => {
+    // 선택한 제품이 장바구니에 이미 있는지 확인
+    const existingIndex = basketItem.findIndex(item => item.name === product.name);
+
+    if (existingIndex !== -1) {
+      // 이미 장바구니에 있는 경우: 수량 증가
+      const updatedBasket = [...basketItem];
+      updatedBasket[existingIndex] = {
+        ...updatedBasket[existingIndex],
+        quantity: (updatedBasket[existingIndex].quantity || 1) + 1,
+      };
+      setBasketItem(updatedBasket);
+    } else {
+      // 장바구니에 없는 경우: 새로운 항목 추가
+      const newBasket = [...basketItem, { ...product, quantity: 1 }];
+      setBasketItem(newBasket);
+    }
+
+    // 모달 닫기
+    setIsCardModal(false);
   };
 
   const onClickCloseModal = () => {
@@ -74,7 +96,7 @@ export const Modal01 = () => {
               <span>{product.price}</span>원
             </ProductPrice>
 
-            {/* <Quantity/> */}
+            <Quantity/>
 
             
           </ProductTop>
