@@ -33,7 +33,7 @@ export const Card02 = () => {
           <span>2,500</span>원
         </ProductPrice>
         <ProductQuantity>
-          <Quantity onChange={handleQuantityChange} />
+          <Quantity/>
         </ProductQuantity>
       </ProductInfo>
     </Wrapper>
