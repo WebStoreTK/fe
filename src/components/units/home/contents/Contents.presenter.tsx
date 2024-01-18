@@ -30,46 +30,46 @@ const onClickOpenModal = (item: ITypeProducts) => () => {
 };
 
 
-  useEffect(() => {
-    const getCategories = async () => {
-      if (!isData) {
-        try {
-          const result = await fetch("/products").then((res: Response) =>
-            res.json()
-          );
-          setAllProducts(result.data);
-          const filteredProducts = result.data.filter(
+    useEffect(() => {
+      const getCategories = async () => {
+        if (!isData) {
+          try {
+            const result = await fetch("/products").then((res: Response) =>
+              res.json()
+            );
+            setAllProducts(result.data);
+            const filteredProducts = result.data.filter(
+              (product: ITypeProducts) => product.categoryId === isCate
+            );
+            setProducts(filteredProducts);
+            setIsData(true);
+          } catch (error) {}
+        } else {
+          const filteredProducts = allProducts.filter(
             (product: ITypeProducts) => product.categoryId === isCate
           );
           setProducts(filteredProducts);
-          setIsData(true);
-        } catch (error) {}
-      } else {
-        const filteredProducts = allProducts.filter(
-          (product: ITypeProducts) => product.categoryId === isCate
-        );
-        setProducts(filteredProducts);
-      }
-    };
-    void getCategories();
-  }, [isCate]);
+        }
+      };
+      void getCategories();
+    }, [isCate]);
 
-  return (
-    <Wrapper>
-      <Menu isCate={isCate} setIsCate={setIsCate} />
-      <ProductContainer>
-        <Title>∞ {isCate} ∞</Title>
-        <CardContainer>
-          {products.map((el, index: number) => (
-            <Card01
-              key={index}
-              product={el}
-              onClickOpenModal={onClickOpenModal}
-            />
-          ))}
-        </CardContainer>
-      </ProductContainer>
-      {isModal && <Modal01 />}
-    </Wrapper>
-  );
-};
+    return (
+      <Wrapper>
+        <Menu isCate={isCate} setIsCate={setIsCate} />
+        <ProductContainer>
+          <Title>∞ {isCate} ∞</Title>
+          <CardContainer>
+            {products.map((el, index: number) => (
+              <Card01
+                key={index}
+                product={el}
+                onClickOpenModal={onClickOpenModal}
+              />
+            ))}
+          </CardContainer>
+        </ProductContainer>
+        {isModal && <Modal01 />}
+      </Wrapper>
+    );
+  };
