@@ -44,7 +44,7 @@ export const ProductInfo = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  background: #bce55c;
+  // background: #bce55c;
 `;
 
 export const ProductTop = styled.div`
@@ -55,7 +55,7 @@ export const ProductTop = styled.div`
   gap: 10px;
   border-bottom: 1px solid ${Common.color.line};
   align-items: center;
-  background: #faed7d;
+  // background: #faed7d;
 `;
 
 export const ProductName = styled.h5`
@@ -88,14 +88,14 @@ export const OptionTitle = styled.p`
   font-size: 1.3em;
   font-weight: bold;
   height: 43px;
-  background: #cbefd5;
+  // background: #cbefd5;
 `;
 
 export const OptionContainer = styled.div`
   display: flex;
   height: 45px;
   gap: 50px;
-  background: #ffa873;
+  // background: #ffa873;
 `;
 export const AddBtn = styled.div`
   width: 100%;
@@ -122,6 +122,5 @@ export const ReleaseBtn = styled.div`
   // background-color: transparent;
   font-size: 35px;
   font-weight: bolder;
-<<<<<<< HEAD
-  background: #0000a0;
+  // background: #0000a0;
 `;
