@@ -165,7 +165,7 @@ export const Modal01 = () => {
           </ProductOption>
 
           <AddBtn>
-            <Button02 btnText="choice2222" onClickBtn={onClickAddBasket} />
+            <Button02 btnText="choice" onClickBtn={onClickAddBasket} />
           </AddBtn>
 
         </ProductInfo>

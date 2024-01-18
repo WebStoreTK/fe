@@ -10,6 +10,7 @@ interface ILayoutProps {
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  height: 100%;
   max-width: 1500px;
   margin: 0 auto;
   border: 1px solid ${Common.color.line};
