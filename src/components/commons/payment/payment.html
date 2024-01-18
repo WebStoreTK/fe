@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문 완료</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap">
+
+    <style>
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .order-confirmation-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        
+        .card-message {
+            color: #ff9800; /* 주황색 */
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+
+        .order-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .action-button {
+            flex: 1;
+            text-decoration: none;
+            padding: 15px 0;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        .receipt-button {
+            background-color: #2d00b5;
+            color: white;
+        }
+
+        .exit-button {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="order-confirmation-container">
+        <h1>주문이 성공적으로 진행되었습니다.</h1>
+        <p class="card-message">카드를 회수해 주세요.</p>
+        <img src="./결제완료.png" alt="주문 완료 이미지" class="order-image">
+        <h1>저희 매장을 이용해 주셔서 감사합니다.</h1>
+        <p>주문번호를 확인 하신 후,</p>
+        <p>안내된 번호에 맞춰 카운터로 오시면 됩니다.</p>
+
+        <div class="button-container">
+            <a href="http://localhost:3000" class="action-button receipt-button">영수증 출력</a>
+            <a href="http://localhost:3000" class="action-button exit-button">종료하기</a>
+        </div>
+    </div>
+</body>
+</html>
