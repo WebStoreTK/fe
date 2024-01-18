@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Common } from "../../../../commons/style/emotion";
+import { IoCloseSharp } from "react-icons/io5";
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -11,6 +12,16 @@ export const Wrapper = styled.div`
 `;
 
 export const Order = styled.div``;
+
+
+export const Delete = styled(IoCloseSharp)`
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: ${Common.color.point};
+  position: absolute;
+  right: 0;
+`;
 
 export const OrderList = styled.div`
   display: flex;

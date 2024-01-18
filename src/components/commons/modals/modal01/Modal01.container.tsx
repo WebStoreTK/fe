@@ -9,6 +9,7 @@ import {
   ProductName,
   ProductOption,
   ProductPrice,
+  Delete,
   ProductTop,
   Wrapper,
 } from "./Modal01.style";
@@ -81,12 +82,7 @@ export const Modal01 = () => {
         <ProductImage><img src={product.image} alt="menus"/></ProductImage>
         <ProductInfo>
           <ProductTop>
-            <ReleaseBtn
-              style={{ cursor: "pointer" }}
-              onClick={onClickCloseModal}
-            >
-              X
-            </ReleaseBtn>
+            <Delete onClick={onClickCloseModal} />
 
             {/* 상품 이름 */}
             <ProductName>{product.name}</ProductName>

@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Common } from "../../../../commons/style/emotion";
+import { IoCloseSharp } from "react-icons/io5";
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -23,6 +24,21 @@ export const ModalContainer = styled.div`
   border-radius: 10px;
   padding: 20px;
   gap: 10px;
+`;
+
+export const Delete = styled(IoCloseSharp)`
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  color: ${Common.color.point};
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  // background-color: transparent;
+  font-size: 35px;
+  font-weight: bolder;
+  // background: #0000a0;
 `;
 
 export const ProductImage = styled.div`

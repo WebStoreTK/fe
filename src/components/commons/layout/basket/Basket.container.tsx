@@ -79,6 +79,7 @@ import {
   Wrapper,
 } from "./Basket.style";
 import { useBasket } from "./basketUtils";
+import { Button03 } from "../../buttons/button01/Button01.container";
 // import { Quantity } from "../../quantity/Quantity.container"; 
 
 export const Basket = () => {
@@ -100,6 +101,12 @@ export const Basket = () => {
     // basketItem이 변경될 때마다 handlePayment 함수 호출
     handlePayment("", 1) // 1은 기본 수량
   }, [basketItem]);
+
+  const onClickBtn = () => {
+    // 이동할 URL 설정
+    const paymentUrl = "http://127.0.0.1:5500/src/components/commons/payment/payment.html"; // 예시 URL
+    window.location.href = paymentUrl;
+  };
 
   return (
     <Wrapper>
@@ -143,8 +150,10 @@ export const Basket = () => {
             원
           </span>
         </AllPayment>
-
-        <PaymentBtn>결제하기</PaymentBtn>
+        <Button03 
+        btnText="결제하기"
+        onClickBtn={onClickBtn}
+        />
       </Payment>
     </Wrapper>
   );
