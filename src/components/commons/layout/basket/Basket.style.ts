@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Common } from "../../../../commons/style/emotion";
 
 export const Wrapper = styled.div`
+  position: fixed;
   display: flex;
   flex-direction: column;
   padding: 2em 1.4em;
