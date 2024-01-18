@@ -6,7 +6,7 @@ import { Common } from "../style/emotion";
 interface ILayoutProps {
   children: JSX.Element;
 }
-
+//화면크기 늘림
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
